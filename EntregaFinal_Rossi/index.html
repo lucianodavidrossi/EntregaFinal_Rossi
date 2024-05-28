@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Préstamo</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animate__animated animate__fadeIn">Simulador de Préstamo</h1>
+        <div id="formulario" class="animate__animated animate__fadeIn">
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo:</label>
+                <input type="text" id="nombreCompleto" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" class="form-control">
+            </div>
+            <button id="botonSiguiente" class="btn btn-primary">Siguiente</button>
+        </div>
+        <div id="motivoPrestamoForm" class="animate__animated animate__fadeIn" style="display: none;">
+            <div class="form-group">
+                <label for="motivoPrestamo">Motivo del Préstamo:</label>
+                <select id="motivoPrestamo" class="form-control">
+                    <option value="auto">Auto</option>
+                    <option value="moto">Moto</option>
+                    <option value="casa">Casa</option>
+                </select>
+            </div>
+            <button id="botonSiguiente2" class="btn btn-primary">Siguiente</button>
+        </div>
+        <div id="cantidadDineroForm" class="animate__animated animate__fadeIn" style="display: none;">
+            <div class="form-group">
+                <label for="cantidadDinero">Cantidad de Dinero:</label>
+                <input type="number" id="cantidadDinero" class="form-control">
+            </div>
+            <button id="botonSiguiente3" class="btn btn-primary">Siguiente</button>
+        </div>
+        <div id="cantidadCuotasForm" class="animate__animated animate__fadeIn" style="display: none;">
+            <div class="form-group">
+                <label for="cantidadCuotas">Cantidad de Cuotas:</label>
+                <input type="number" id="cantidadCuotas" class="form-control">
+            </div>
+            <button id="botonSiguiente4" class="btn btn-primary">Calcular</button>
+        </div>
+        <div id="resultado" class="animate__animated animate__fadeIn" style="display: none;"></div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script src="simulador.js" defer></script>
+</body>
+</html>
